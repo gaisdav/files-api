@@ -1,0 +1,14 @@
+version: "3.1"
+services:
+  mysql:
+    image: mysql:latest
+    container_name: api
+    environment:
+      MYSQL_PASSWORD: test
+      MYSQL_ROOT_PASSWORD: test
+      MYSQL_DATABASE: test
+      MYSQL_USER: test
+    volumes:
+      - ./docker/mysql:/var/lib/mysql
+    ports:
+      - "3306:3306"
